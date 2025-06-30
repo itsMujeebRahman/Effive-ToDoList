@@ -25,6 +25,7 @@ app.get("/get/:id", (req, res) => {
 
 // for creating parent task
 app.post("/add", (req, res) => {
+  console.log("taskName");
   const Task = req.body.taskName;
   TodoModel.create({
     taskName: Task,
